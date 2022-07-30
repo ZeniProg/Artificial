@@ -1,0 +1,15 @@
+// * Миксин для подключения шрифтов
+
+@mixin font-face($font-family, $url, $weight) {
+	@font-face {
+		src: url("../fonts/#{$url}.woff2") format("woff2");
+		font-family: "#{$font-family}";
+		font-weight: #{$weight};
+		font-style: normal;
+		font-display: swap;
+	}
+}
+
+// * Подключение шрифтов
+
+@include font-face("Atenta", "Atenta-Regular", 400);
